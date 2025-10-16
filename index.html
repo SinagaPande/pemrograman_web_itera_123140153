@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manajemen Tugas Mahasiswa</h1>
+            <div class="stats" id="stats">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+        </header>
+
+        <div class="form-container">
+            <h2 id="form-title">Tambah Tugas Baru</h2>
+            <form id="task-form">
+                <!-- HAPUS: input hidden yang tidak terpakai -->
+                <div class="form-group">
+                    <label for="task-name">Nama Tugas *</label>
+                    <input type="text" id="task-name" placeholder="Masukkan nama tugas" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Mata Kuliah *</label>
+                    <input type="text" id="course" placeholder="Masukkan mata kuliah" required>
+                </div>
+                <div class="form-group">
+                    <label for="deadline">Deadline *</label>
+                    <input type="date" id="deadline" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-warning" style="display: none;">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan Tugas</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="filters">
+            <h3>Filter & Pencarian</h3>
+            <div class="filter-group">
+                <select id="status-filter">
+                    <option value="">Semua Status</option>
+                    <option value="pending">Belum Selesai</option>
+                    <option value="completed">Selesai</option>
+                </select>
+                <select id="course-filter">
+                    <option value="">Semua Mata Kuliah</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                <button id="clear-filters" class="btn">Bersihkan Filter</button>
+            </div>
+        </div>
+
+        <div class="tasks-container">
+            <h3>Daftar Tugas</h3>
+            <div class="task-list" id="task-list">
+                <!-- Tasks will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
