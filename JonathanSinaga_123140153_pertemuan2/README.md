@@ -2,7 +2,7 @@
 
 Dashboard pribadi yang elegan, responsif, dan ringan untuk mengelola tugas, catatan, cuaca, serta waktu — lengkap dengan dukungan mode gelap dan terang.
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - **Widget Cuaca** – Menampilkan informasi cuaca terkini *(demo menggunakan data mock)*  
 - **Jam Digital** – Waktu real-time dengan tanggal lengkap  
@@ -13,7 +13,7 @@ Dashboard pribadi yang elegan, responsif, dan ringan untuk mengelola tugas, cata
 - **Local Storage** – Semua data disimpan secara lokal di browser  
 - **Toast Notifications** – Notifikasi interaktif untuk aksi pengguna  
 
-## 🛠️ Teknologi
+## Teknologi
 
 - **HTML5** – Struktur semantik  
 - **CSS3** – Grid, Flexbox, animasi, dan custom properties  
@@ -22,7 +22,7 @@ Dashboard pribadi yang elegan, responsif, dan ringan untuk mengelola tugas, cata
 - **Local Storage API** – Penyimpanan data lokal  
 
 
-## 🎯 Panduan Penggunaan
+## Panduan Penggunaan
 
 ### 1. Tugas
 - Klik tombol **Tambah** di widget Tugas  
@@ -42,20 +42,20 @@ Dashboard pribadi yang elegan, responsif, dan ringan untuk mengelola tugas, cata
 - Menampilkan informasi cuaca (versi demo)  
 - Untuk cuaca real-time, integrasikan dengan API seperti OpenWeatherMap  
 
-## 🔧 Instalasi
+## Instalasi
 
 1. **Clone atau download** repositori ini  
 2. **Buka `index.html`** langsung di browser  
 3. Aplikasi siap digunakan tanpa instalasi tambahan  
 
-## 📱 Responsivitas
+## Responsivitas
 
 Tata letak menyesuaikan otomatis:  
 - **Desktop:** 2–4 kolom  
 - **Tablet:** 2 kolom  
 - **Mobile:** 1 kolom  
 
-## 💾 Penyimpanan Data
+## Penyimpanan Data
 
 Data disimpan secara lokal menggunakan **Local Storage**:
 - Tugas dan catatan tidak hilang saat browser ditutup  
