@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tachometer-alt"></i>
+                <h1>Personal Dashboard</h1>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Weather Widget -->
+            <div class="widget" id="weatherWidget">
+                <div class="widget-header">
+                    <h2><i class="fas fa-cloud-sun"></i> Cuaca Hari Ini</h2>
+                </div>
+                <div class="weather-info">
+                    <div class="location" id="weatherLocation">Memuat lokasi...</div>
+                    <div class="temp" id="weatherTemp">--°C</div>
+                    <div class="description" id="weatherDescription">Memuat cuaca...</div>
+                </div>
+            </div>
+
+            <!-- Clock Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h2><i class="fas fa-clock"></i> Jam Digital</h2>
+                </div>
+                <div class="clock">
+                    <div class="time" id="currentTime">00:00:00</div>
+                    <div class="date" id="currentDate">Senin, 1 Januari 2023</div>
+                </div>
+            </div>
+
+            <!-- Tasks Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h2><i class="fas fa-tasks"></i> Daftar Tugas</h2>
+                    <button class="btn btn-primary btn-sm" id="addTaskBtn">
+                        <i class="fas fa-plus"></i> Tambah
+                    </button>
+                </div>
+                <div class="task-list" id="taskList">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- Notes Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h2><i class="fas fa-sticky-note"></i> Catatan</h2>
+                    <button class="btn btn-primary btn-sm" id="addNoteBtn">
+                        <i class="fas fa-plus"></i> Tambah
+                    </button>
+                </div>
+                <div class="note-list" id="noteList">
+                    <!-- Notes will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Modal -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="taskModalTitle">Tambah Tugas Baru</h2>
+                <button class="close-modal" id="closeTaskModal">&times;</button>
+            </div>
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                <div class="form-group">
+                    <label for="taskTitle">Judul Tugas</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Deskripsi</label>
+                    <textarea id="taskDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskDueDate">Tanggal Jatuh Tempo</label>
+                    <input type="date" id="taskDueDate" min="">
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">Prioritas</label>
+                    <select id="taskPriority">
+                        <option value="low">Rendah</option>
+                        <option value="medium" selected>Sedang</option>
+                        <option value="high">Tinggi</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-danger" id="deleteTaskBtn">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Note Modal -->
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="noteModalTitle">Tambah Catatan Baru</h2>
+                <button class="close-modal" id="closeNoteModal">&times;</button>
+            </div>
+            <form id="noteForm">
+                <input type="hidden" id="noteId">
+                <div class="form-group">
+                    <label for="noteTitle">Judul Catatan</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteContent">Konten</label>
+                    <textarea id="noteContent" rows="5" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-danger" id="deleteNoteBtn">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal confirm-modal" id="confirmModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="confirmModalTitle">Konfirmasi</h2>
+                <button class="close-modal" id="closeConfirmModal">&times;</button>
+            </div>
+            <p id="confirmMessage">Apakah Anda yakin ingin menghapus item ini?</p>
+            <div class="confirm-actions">
+                <button class="btn btn-danger" id="confirmDeleteBtn">Ya, Hapus</button>
+                <button class="btn" id="cancelDeleteBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
