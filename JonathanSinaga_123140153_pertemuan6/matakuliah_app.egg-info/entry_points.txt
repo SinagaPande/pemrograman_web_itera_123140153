@@ -1,0 +1,5 @@
+[console_scripts]
+init_db = matakuliah_app.scripts:init_db
+
+[paste.app_factory]
+main = matakuliah_app:main

@@ -1,0 +1,8 @@
+setup.py
+matakuliah_app.egg-info/PKG-INFO
+matakuliah_app.egg-info/SOURCES.txt
+matakuliah_app.egg-info/dependency_links.txt
+matakuliah_app.egg-info/entry_points.txt
+matakuliah_app.egg-info/not-zip-safe
+matakuliah_app.egg-info/requires.txt
+matakuliah_app.egg-info/top_level.txt
